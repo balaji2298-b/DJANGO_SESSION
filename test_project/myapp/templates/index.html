@@ -8,13 +8,13 @@
 <style>
     h1{
 		text-align: center;
-		color: red;
+		color: black;
 	}
 	.container{
 		height:400px;
 		width: 500px;
 		margin:50px auto;
-		background-color:yellow;
+		background-color:lightsalmon;
 		text-align: center;
 		padding: 10px 20px 10px;
 		gap:10px;
@@ -30,27 +30,27 @@
 		border: 1px soild blue;
 		font-size:23px;
 		margin-right: 10px;
-        margin-top:10px;
+                margin-top:10px;
 	}
 </style>
 <body>
-	<form action="submit" method="POST">
+	<form action="submit" method="POST" autocomplete="off">
 		{% csrf_token %}
         <div class=container>
 		     	<h1>Form</h1>
 		     	   <div>
 				     	<label>Name:</label>
-				     	<input type="text" name="name">
+				     	<input type="text" name="name" required>
 			       </div>
 			       <br>
 			     	<div>
 				     	<label>Age:</label>
-				     	<input type="text" name="age">
+				     	<input type="text" name="age" required>
 			       </div>
 			     </br>
 			       <div>
 				     	<label>City:</label>
-				     	<input type="text" name="city">
+				     	<input type="text" name="city" required>
 			       </div>
 			       </br>
 			       <button >Submit</button>	
